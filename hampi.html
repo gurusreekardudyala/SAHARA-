@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampi Travel Guide - Sahara Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="hampi-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#nearby">Nearby Places</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hampi-hero">
+        <div class="hero-content">
+            <h1>Welcome to Hampi</h1>
+            <p>Explore the Ancient Capital of Vijayanagara Empire</p>
+            <a href="#attractions" class="explore-btn">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section hampi-weather">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="attractions" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Popular Attractions</h2>
+            </div>
+            <div class="temple-grid">
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?virupaksha-temple" alt="Virupaksha Temple">
+                    <div class="temple-content">
+                        <h3>Virupaksha Temple</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 6:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Entry: Free</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Hampi Bazaar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?vittala-temple" alt="Vittala Temple">
+                    <div class="temple-content">
+                        <h3>Vittala Temple</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 8:30 AM - 5:30 PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Entry: ₹40</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 2 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?lotus-mahal" alt="Lotus Mahal">
+                    <div class="temple-content">
+                        <h3>Lotus Mahal</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 8:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Entry: ₹30</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Royal Center</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nearby" class="nearby-locations">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Nearby Attractions</h2>
+            </div>
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>Virupaksha Temple</h3>
+                    <p>The main center of pilgrimage at Hampi and an active Shiva temple.</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.7123456789!2d76.4601234567891!3d15.3351234567891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77d7f96ee3aef%3A0x4c13c63f0843d1e!2sVirupaksha%20Temple!5e0!3m2!1sen!2sin!4v1651182348291!5m2!1sen!2sin"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>Vittala Temple</h3>
+                    <p>Famous for its stone chariot and musical pillars.</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.8123456789!2d76.4701234567891!3d15.3451234567891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77d8f96ee3aef%3A0x4c13c63f0843d1e!2sVittala%20Temple!5e0!3m2!1sen!2sin!4v1651182348291!5m2!1sen!2sin"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>Lotus Mahal</h3>
+                    <p>A beautiful example of Indo-Islamic architecture.</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.9123456789!2d76.4801234567891!3d15.3551234567891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77d9f96ee3aef%3A0x4c13c63f0843d1e!2sLotus%20Mahal!5e0!3m2!1sen!2sin!4v1651182348291!5m2!1sen!2sin"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hampi-guide" class="nearby-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Hampi Travel Guide</h2>
+            </div>
+            <div class="location-status">
+                <button id="getLocation" class="location-button">
+                    <i class="fas fa-map-marker-alt"></i> Find Facilities Near Me
+                </button>
+                <p id="locationStatus">Click the button to find nearby facilities</p>
+            </div>
+            <div class="nearby-facilities">
+                <!-- Facilities will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="accommodation" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Where to Stay</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-hotel"></i> Luxury Hotels</h3>
+                    <ul class="info-list">
+                        <li>Evolve Back, Hampi</li>
+                        <li>Heritage Resort Hampi</li>
+                        <li>Hyatt Place Hampi</li>
+                        <li>Royal Orchid Central</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-home"></i> Guesthouses</h3>
+                    <ul class="info-list">
+                        <li>Gowri Guest House</li>
+                        <li>Hampi's Boulders</li>
+                        <li>Mowgli Guest House</li>
+                        <li>White Elephant</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-bed"></i> Budget Stays</h3>
+                    <ul class="info-list">
+                        <li>Sunny Guest House</li>
+                        <li>Bobby Guest House</li>
+                        <li>Padma Guest House</li>
+                        <li>Murali Guest House</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Contact Information</h2>
+            </div>
+            <div class="detail-card contact-info">
+                <h4>Sahara Travel Services - Hampi Branch</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Hampi Bazaar Road, Near Virupaksha Temple, Hampi - 583239</p>
+                <p><i class="fas fa-phone"></i> Contact: +91-XXX-XXXXXXX</p>
+                <p><i class="fas fa-clock"></i> Working Hours: 8:00 AM to 8:00 PM (All days)</p>
+                <p><i class="fas fa-info-circle"></i> Services:</p>
+                <ul>
+                    <li>Heritage Tours</li>
+                    <li>Accommodation Booking</li>
+                    <li>Transport Services</li>
+                    <li>Photography Tours</li>
+                    <li>24/7 Tourist Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Sahara Travel</h3>
+                <p>Your trusted companion for exploring the most beautiful destinations in India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#nearby">Nearby Places</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Weather API Integration
+        $(document).ready(function() {
+            const API_KEY = 'YOUR_API_KEY'; // Replace with actual OpenWeatherMap API key
+            const CITY = 'Hospet'; // Nearest major city to Hampi
+            
+            // Current Weather
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                $('#current-weather').html(`
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather icon">
+                    </div>
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <p class="temperature">${Math.round(data.main.temp)}°C</p>
+                        <p class="description">${data.weather[0].description}</p>
+                        <p class="humidity">Humidity: ${data.main.humidity}%</p>
+                    </div>
+                `);
+            });
+
+            // 3-Day Forecast
+            $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                let forecastHtml = '<div class="forecast-days">';
+                for(let i = 0; i < data.list.length; i += 8) {
+                    const day = new Date(data.list[i].dt * 1000);
+                    forecastHtml += `
+                        <div class="forecast-day">
+                            <h4>${day.toLocaleDateString('en-US', {weekday: 'short'})}</h4>
+                            <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt="Weather icon">
+                            <p>${Math.round(data.list[i].main.temp)}°C</p>
+                            <p>${data.list[i].weather[0].description}</p>
+                        </div>
+                    `;
+                }
+                forecastHtml += '</div>';
+                $('.forecast-container').html(forecastHtml);
+            });
+        });
+
+        // Nearby Facilities Feature
+        document.getElementById('getLocation').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                document.getElementById('locationStatus').textContent = 'Getting your location...';
+                navigator.geolocation.getCurrentPosition(showNearbyFacilities, handleLocationError);
+            } else {
+                document.getElementById('locationStatus').textContent = 'Geolocation is not supported by your browser.';
+            }
+        });
+
+        function showNearbyFacilities(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            document.getElementById('locationStatus').textContent = 'Found your location! Loading nearby facilities...';
+            
+            // Here you would typically make an API call to Google Places API
+            // For demonstration, we'll show some static content
+            const facilitiesHtml = `
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <h3><i class="fas fa-utensils"></i> Restaurants</h3>
+                        <ul>
+                            <li>Mango Tree Restaurant (0.5 km)</li>
+                            <li>Laughing Buddha Café (0.8 km)</li>
+                            <li>Gopi Rooftop Restaurant (1.2 km)</li>
+                        </ul>
+                    </div>
+                    <div class="facility-card">
+                        <h3><i class="fas fa-first-aid"></i> Medical Facilities</h3>
+                        <ul>
+                            <li>Hampi Medical Center (1.5 km)</li>
+                            <li>Government Hospital (2 km)</li>
+                            <li>24/7 Pharmacy (0.7 km)</li>
+                        </ul>
+                    </div>
+                    <div class="facility-card">
+                        <h3><i class="fas fa-shopping-bag"></i> Shopping</h3>
+                        <ul>
+                            <li>Hampi Bazaar (0.3 km)</li>
+                            <li>Handicraft Market (0.6 km)</li>
+                            <li>Local Art Gallery (1 km)</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            document.querySelector('.nearby-facilities').innerHTML = facilitiesHtml;
+            document.getElementById('locationStatus').textContent = 'Nearby facilities loaded!';
+        }
+
+        function handleLocationError(error) {
+            let message = 'Error getting your location: ';
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    message += 'Permission denied';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message += 'Position unavailable';
+                    break;
+                case error.TIMEOUT:
+                    message += 'Timeout';
+                    break;
+                default:
+                    message += 'Unknown error';
+            }
+            document.getElementById('locationStatus').textContent = message;
+        }
+    </script>
+</body>
+</html> 

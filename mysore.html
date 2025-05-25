@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysore Travel Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Additional styles for Google Maps integration */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #google-map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .map-controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .map-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .map-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .info-window-content {
+            max-width: 200px;
+            padding: 10px;
+        }
+        
+        .info-window-content h4 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .info-window-content p {
+            margin: 0 0 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .loading-map {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .directions-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .directions-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .directions-input input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+        
+        .directions-input input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        #directions-result {
+            max-height: 300px;
+            overflow-y: auto;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#healthcare">Healthcare</a></li>
+                <li><a href="#police">Police Stations</a></li>
+                <li><a href="#office">Office Areas</a></li>
+                <li><a href="#tourist">Tourist Places</a></li>
+                <li><a href="#temples">Temples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tirupati-hero">
+        <div class="tirupati-hero-content">
+            <h1>Welcome to Mysore</h1>
+            <p>Discover the cultural capital of Karnataka</p>
+            <a href="#tourist" class="book-darshan">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="healthcare" class="guides">
+        <h2>Healthcare Facilities</h2>
+        <div class="guides-container">
+            <div class="guide-card">
+                <i class="fas fa-hospital"></i>
+                <h3>Apollo Hospital</h3>
+                <p>KRS Road, Mysore</p>
+                <p>24/7 Emergency Services</p>
+                <p>Phone: 0821-2345678</p>
+            </div>
+            <div class="guide-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>JSS Hospital</h3>
+                <p>MG Road, Mysore</p>
+                <p>Multi-specialty Hospital</p>
+                <p>Phone: 0821-2345679</p>
+            </div>
+            <div class="guide-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Krishna Rajendra Hospital</h3>
+                <p>Sayyaji Rao Road</p>
+                <p>Government Hospital</p>
+                <p>Phone: 0821-2345680</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="police" class="tips">
+        <h2>Police Stations</h2>
+        <div class="tips-container">
+            <div class="tip">
+                <h3>Devaraja Police Station</h3>
+                <p>Location: Devaraja Market Area</p>
+                <p>Phone: 0821-2418111</p>
+            </div>
+            <div class="tip">
+                <h3>Krishnaraja Police Station</h3>
+                <p>Location: KR Circle</p>
+                <p>Phone: 0821-2418112</p>
+            </div>
+            <div class="tip">
+                <h3>Nazarbad Police Station</h3>
+                <p>Location: Nazarbad Main Road</p>
+                <p>Phone: 0821-2418113</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="office" class="destinations">
+        <h2>Business Districts & Office Areas</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?office" alt="Office Area">
+                <div class="card-content">
+                    <h3>IT Park</h3>
+                    <p>Mysore's technology hub with multiple IT companies</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?business" alt="Business District">
+                <div class="card-content">
+                    <h3>Central Business District</h3>
+                    <p>Located around D. Devaraja Urs Road</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tourist" class="destinations">
+        <h2>Tourist Attractions</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?mysore-palace" alt="Mysore Palace">
+                <div class="card-content">
+                    <h3>Mysore Palace</h3>
+                    <p>The iconic palace of Mysore, illuminated with thousands of lights</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?garden" alt="Brindavan Gardens">
+                <div class="card-content">
+                    <h3>Brindavan Gardens</h3>
+                    <p>Beautiful terraced gardens with musical fountains</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?zoo" alt="Mysore Zoo">
+                <div class="card-content">
+                    <h3>Mysore Zoo</h3>
+                    <p>One of the oldest and most popular zoos in India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temples" class="destinations">
+        <h2>Famous Temples</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?temple" alt="Chamundeshwari Temple">
+                <div class="card-content">
+                    <h3>Chamundeshwari Temple</h3>
+                    <p>Ancient temple atop Chamundi Hills</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?church" alt="St. Philomena's Church">
+                <div class="card-content">
+                    <h3>St. Philomena's Church</h3>
+                    <p>Neo-Gothic style church, one of the largest in India</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/800x600/?hindu-temple" alt="Lakshmiramana Swamy Temple">
+                <div class="card-content">
+                    <h3>Lakshmiramana Swamy Temple</h3>
+                    <p>Historic temple in the heart of Mysore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Maps Section with Google Maps API -->
+    <section id="maps" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Interactive Map & Directions</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Getting Here</h3>
+                    <ul class="info-list">
+                        <li>Located in Karnataka, South India</li>
+                        <li>140 km from Bangalore</li>
+                        <li>165 km from Coimbatore</li>
+                        <li>180 km from Ooty</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Best Time to Visit</h3>
+                    <ul class="info-list">
+                        <li>October to February (Winter)</li>
+                        <li>Pleasant temperature: 20-30°C</li>
+                        <li>Dasara Festival (September/October)</li>
+                        <li>Less crowded on weekdays</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> Travel Tips</h3>
+                    <ul class="info-list">
+                        <li>Book Palace tickets in advance</li>
+                        <li>Visit Zoo in morning hours</li>
+                        <li>Evening visit to Brindavan Gardens</li>
+                        <li>Local transport readily available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Map Controls -->
+            <div class="map-controls">
+                <button class="map-btn active" onclick="showAllLocations()">
+                    <i class="fas fa-map"></i> All Locations
+                </button>
+                <button class="map-btn" onclick="showTouristPlaces()">
+                    <i class="fas fa-camera"></i> Tourist Places
+                </button>
+                <button class="map-btn" onclick="showHospitals()">
+                    <i class="fas fa-hospital"></i> Hospitals
+                </button>
+                <button class="map-btn" onclick="showPoliceStations()">
+                    <i class="fas fa-shield-alt"></i> Police Stations
+                </button>
+                <button class="map-btn" onclick="toggleDirections()">
+                    <i class="fas fa-route"></i> Get Directions
+                </button>
+            </div>
+            
+            <!-- Google Map Container -->
+            <div class="map-container">
+                <div id="google-map">
+                    <div class="loading-map">
+                        <i class="fas fa-spinner fa-spin fa-2x"></i>
+                        <span style="margin-left: 10px;">Loading Interactive Map...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Directions Panel -->
+            <div class="directions-panel" id="directions-panel">
+                <h3><i class="fas fa-route"></i> Get Directions</h3>
+                <div class="directions-input">
+                    <input type="text" id="start-location" placeholder="Enter starting location">
+                    <input type="text" id="end-location" placeholder="Enter destination">
+                    <button class="map-btn" onclick="calculateRoute()">
+                        <i class="fas fa-search"></i> Find Route
+                    </button>
+                </div>
+                <div id="directions-result"></div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-route"></i> Major Attractions</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-palace"></i> Mysore Palace: 0 km (City Center)</span>
+                        <span><i class="fas fa-mountain"></i> Chamundi Hills: 3 km</span>
+                        <span><i class="fas fa-tree"></i> Brindavan Gardens: 12 km</span>
+                        <span><i class="fas fa-church"></i> St. Philomena's Church: 2 km</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-bus"></i> Local Transport</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-bus"></i> City Bus Service</span>
+                        <span><i class="fas fa-car"></i> Taxi Services</span>
+                        <span><i class="fas fa-motorcycle"></i> Auto Rickshaws</span>
+                        <span><i class="fas fa-bicycle"></i> Bike Rentals</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Helpline Numbers</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-info-circle"></i> Tourist Help: 1800-425-2355</span>
+                        <span><i class="fas fa-taxi"></i> Taxi Booking: 0821-2444444</span>
+                        <span><i class="fas fa-hospital"></i> Medical Emergency: 108</span>
+                        <span><i class="fas fa-shield-alt"></i> Police Control: 100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Emergency Contacts</h3>
+                <ul>
+                    <li>Police: 100</li>
+                    <li>Ambulance: 108</li>
+                    <li>Fire: 101</li>
+                    <li>Tourist Helpline: 1800-425-2355</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#healthcare">Healthcare</a></li>
+                    <li><a href="#police">Police Stations</a></li>
+                    <li><a href="#tourist">Tourist Places</a></li>
+                    <li><a href="#temples">Temples</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables for Google Maps
+        let map;
+        let directionsService;
+        let directionsRenderer;
+        let markers = [];
+        let infoWindows = [];
+        
+        // Location data
+        const locations = {
+            tourist: [
+                {
+                    name: "Mysore Palace",
+                    lat: 12.3051,
+                    lng: 76.6551,
+                    type: "tourist",
+                    description: "The iconic palace of Mysore, illuminated with thousands of lights",
+                    phone: "0821-2421051"
+                },
+                {
+                    name: "Brindavan Gardens",
+                    lat: 12.4242,
+                    lng: 76.5647,
+                    type: "tourist",
+                    description: "Beautiful terraced gardens with musical fountains",
+                    phone: "08236-252978"
+                },
+                {
+                    name: "Mysore Zoo",
+                    lat: 12.3009,
+                    lng: 76.6614,
+                    type: "tourist",
+                    description: "One of the oldest and most popular zoos in India",
+                    phone: "0821-2520302"
+                },
+                {
+                    name: "Chamundeshwari Temple",
+                    lat: 12.2719,
+                    lng: 76.6727,
+                    type: "tourist",
+                    description: "Ancient temple atop Chamundi Hills",
+                    phone: "0821-2480746"
+                }
+            ],
+            hospitals: [
+                {
+                    name: "Apollo Hospital",
+                    lat: 12.2958,
+                    lng: 76.6394,
+                    type: "hospital",
+                    description: "KRS Road, Mysore - 24/7 Emergency Services",
+                    phone: "0821-2345678"
+                },
+                {
+                    name: "JSS Hospital",
+                    lat: 12.3116,
+                    lng: 76.6547,
+                    type: "hospital",
+                    description: "MG Road, Mysore - Multi-specialty Hospital",
+                    phone: "0821-2345679"
+                },
+                {
+                    name: "Krishna Rajendra Hospital",
+                    lat: 12.3073,
+                    lng: 76.6538,
+                    type: "hospital",
+                    description: "Sayyaji Rao Road - Government Hospital",
+                    phone: "0821-2345680"
+                }
+            ],
+            police: [
+                {
+                    name: "Devaraja Police Station",
+                    lat: 12.3048,
+                    lng: 76.6551,
+                    type: "police",
+                    description: "Devaraja Market Area",
+                    phone: "0821-2418111"
+                },
+                {
+                    name: "Krishnaraja Police Station",
+                    lat: 12.3076,
+                    lng: 76.6563,
+                    type: "police",
+                    description: "KR Circle",
+                    phone: "0821-2418112"
+                },
+                {
+                    name: "Nazarbad Police Station",
+                    lat: 12.3124,
+                    lng: 76.6492,
+                    type: "police",
+                    description: "Nazarbad Main Road",
+                    phone: "0821-2418113"
+                }
+            ]
+        };
+
+        // Initialize Google Maps
+        function initMap() {
+            // Create map centered on Mysore
+            map = new google.maps.Map(document.getElementById('google-map'), {
+                zoom: 12,
+                center: { lat: 12.3051, lng: 76.6551 }, // Mysore Palace coordinates
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true,
+                zoomControl: true,
+                styles: [
+                    {
+                        featureType: 'poi',
+                        elementType: 'labels',
+                        stylers: [{ visibility: 'on' }]
+                    }
+                ]
+            });
+
+            // Initialize directions service and renderer
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer({
+                draggable: true,
+                panel: document.getElementById('directions-result')
+            });
+            directionsRenderer.setMap(map);
+
+            // Show all locations by default
+            showAllLocations();
+        }
+
+        // Clear all markers
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+            infoWindows.forEach(infoWindow => infoWindow.close());
+            infoWindows = [];
+        }
+
+        // Create marker with info window
+        function createMarker(location) {
+            let iconUrl;
+            let iconColor;
+
+            switch (location.type) {
+                case 'tourist':
+                    iconUrl = 'https://maps.google.com/mapfiles/ms/icons/red-dot.png';
+                    iconColor = '#FF6B6B';
+                    break;
+                case 'hospital':
+                    iconUrl = 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+                    iconColor = '#4ECDC4';
+                    break;
+                case 'police':
+                    iconUrl = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png';
+                    iconColor = '#45B7D1';
+                    break;
+                default:
+                    iconUrl = 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png';
+                    iconColor = '#FFA07A';
+            }
+
+            const marker = new google.maps.Marker({
+                position: { lat: location.lat, lng: location.lng },
+                map: map,
+                title: location.name,
+                icon: {
+                    url: iconUrl,
+                    scaledSize: new google.maps.Size(32, 32)
+                },
+                animation: google.maps.Animation.DROP
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div class="info-window-content">
+                        <h4>${location.name}</h4>
+                        <p><i class="fas fa-info-circle"></i> ${location.description}</p>
+                        <p><i class="fas fa-phone"></i> ${location.phone}</p>
+                        <button class="map-btn" onclick="getDirectionsTo(${location.lat}, ${location.lng}, '${location.name}')" style="margin-top: 8px; padding: 5px 10px; font-size: 12px;">
+                            <i class="fas fa-route"></i> Get Directions
+                        </button>
+                    </div>
+                `
+            });
+
+            marker.addListener('click', () => {
+                // Close all other info windows
+                infoWindows.forEach(iw => iw.close());
+                infoWindow.open(map, marker);
+            });
+
+            markers.push(marker);
+            infoWindows.push(infoWindow);
+        }
+
+        // Show all locations
+        function showAllLocations() {
+            clearMarkers();
+            updateActiveButton(0);
+            
+            Object.values(locations).forEach(category => {
+                category.forEach(location => createMarker(location));
+            });
+            
+            // Fit map to show all markers
+            if (markers.length > 0) {
+                const bounds = new google.maps.LatLngBounds();
+                markers.forEach(marker => bounds.extend(marker.getPosition()));
+                map.fitBounds(bounds);
+                
+                // Ensure minimum zoom level
+                google.maps.event.addListenerOnce(map, 'bounds_changed', () => {
+                    if (map.getZoom() > 14) {
+                        map.setZoom(14);
+                    }
+                });
+            }
+        }
+
+        // Show only tourist places
+        function showTouristPlaces() {
+            clearMarkers();
+            updateActiveButton(1);
+            locations.tourist.forEach(location => createMarker(location));
+            fitMapToMarkers();
+        }
+
+        // Show only hospitals
+        function showHospitals() {
+            clearMarkers();
+            updateActiveButton(2);
+            locations.hospitals.forEach(location => createMarker(location));
+            fitMapToMarkers();
+        }
+
+        // Show only police stations
+        function showPoliceStations() {
+            clearMarkers();
+            updateActiveButton(3);
+            locations.police.forEach(location => createMarker(location));
+            fitMapToMarkers();
+        }
+
+        // Fit map to current markers
+        function fitMapToMarkers() {
+            if (markers.length > 0) {
+                const bounds = new google.maps.LatLngBounds();
+                markers.forEach(marker => bounds.extend(marker.getPosition()));
+                map.fitBounds(bounds);
+                
+                google.maps.event.addListenerOnce(map, 'bounds_changed', () => {
+                    if (map.getZoom() > 15) {
+                        map.setZoom(15);
+                    }
+                });
+            }
+        }
+
+        // Update active button style
+        function updateActiveButton(activeIndex) {
+            const buttons = document.querySelectorAll('.map-btn');
+            buttons.forEach((btn, index) => {
+                if (index === activeIndex) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Toggle directions panel
+        function toggleDirections() {
+            const panel = document.getElementById('directions-panel');
+            if (panel.style.display === 'none' || panel.style.display === '') {
+                panel.style.display = 'block';
+                // Set default end location to Mysore Palace
+                document.getElementById('end-location').value = 'Mysore Palace, Mysore, Karnataka, India';
+            } else {
+                panel.style.display = 'none';
+                directionsRenderer.setDirections({routes: []});
+            }
+        }
+
+        // Calculate route between two points
+        function calculateRoute() {
+            const startLocation = document.getElementById('start-location').value;
+            const endLocation = document.getElementById('end-location').value;
+
+            if (!startLocation || !endLocation) {
+                alert('Please enter both starting location and destination');
+                return;
+            }
+
+            const request = {
+                origin: startLocation,
+                destination: endLocation,
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === 'OK') {
+                    directionsRenderer.setDirections(result);
+                    
+                    // Show route info
+                    const route = result.routes[0];
+                    const leg = route.legs[0];
+                    
+                    const routeInfo = `
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                            <h4 style="margin: 0 0 10px 0; color: #333;">
+                                <i class="fas fa-route"></i> Route Summary
+                            </h4>
+                            <p style="margin: 5px 0; color: #666;">
+                                <i class="fas fa-map-marker-alt"></i> 
+                                <strong>Distance:</strong> ${leg.distance.text}
+                            </p>
+                            <p style="margin: 5px 0; color: #666;">
+                                <i class="fas fa-clock"></i> 
+                                <strong>Duration:</strong> ${leg.duration.text}
+                            </p>
+                        </div>
+                    `;
+                    
+                    document.getElementById('directions-result').innerHTML = routeInfo + document.getElementById('directions-result').innerHTML;
+                } else {
+                    alert('Could not calculate route: ' + status);
+                }
+            });
+        }
+
+        // Get directions to a specific location
+        function getDirectionsTo(lat, lng, locationName) {
+            document.getElementById('end-location').value = locationName;
+            
+            // Try to get user's current location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+                    document.getElementById('start-location').value = `${userLat}, ${userLng}`;
+                    
+                    toggleDirections();
+                    setTimeout(() => calculateRoute(), 500);
+                }, (error) => {
+                    // If geolocation fails

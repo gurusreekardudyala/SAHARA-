@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanyakumari Travel Guide - Where Three Oceans Meet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="kanyakumari-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#tourist-places">Tourist Places</a></li>
+                <li><a href="#healthcare">Healthcare</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#maps">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="kanyakumari-hero">
+        <div class="hero-content">
+            <h1>Welcome to Kanyakumari</h1>
+            <p>Where the Arabian Sea, Bay of Bengal, and Indian Ocean Meet</p>
+            <a href="#tourist-places" class="book-darshan">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tourist-places" class="destinations">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Tourist Attractions</h2>
+            </div>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?vivekananda-rock" alt="Vivekananda Rock">
+                    <div class="card-content">
+                        <h3>Vivekananda Rock Memorial</h3>
+                        <p>Historic memorial on a rock island where Swami Vivekananda meditated.</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 7:00 AM - 4:00 PM</span>
+                            <span><i class="fas fa-ticket"></i> Entry: ₹70</span>
+                            <span><i class="fas fa-ship"></i> Ferry: ₹35</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?thiruvalluvar" alt="Thiruvalluvar Statue">
+                    <div class="card-content">
+                        <h3>Thiruvalluvar Statue</h3>
+                        <p>133 ft tall statue of Tamil poet and philosopher.</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 7:00 AM - 4:00 PM</span>
+                            <span><i class="fas fa-ticket"></i> Included with ferry</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?sunset-beach" alt="Sunset Point">
+                    <div class="card-content">
+                        <h3>Sunset Point</h3>
+                        <p>View point for spectacular sunrises and sunsets.</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-sun"></i> Sunrise: 5:30 AM - 7:00 AM</span>
+                            <span><i class="fas fa-moon"></i> Sunset: 5:00 PM - 6:30 PM</span>
+                            <span><i class="fas fa-ticket"></i> Entry: Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="healthcare" class="guides">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Healthcare Facilities</h2>
+            </div>
+            <div class="guides-container">
+                <div class="guide-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Government Medical College Hospital</h3>
+                    <p>Asaripallam Road, Kanyakumari</p>
+                    <p>Phone: 04652-231417</p>
+                    <p>24/7 Emergency Services</p>
+                </div>
+                <div class="guide-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>CSI Mission Hospital</h3>
+                    <p>Near Railway Station</p>
+                    <p>Phone: 04652-246235</p>
+                    <p>Timing: 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="guide-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Kanyakumari Medical Centre</h3>
+                    <p>Cape Road</p>
+                    <p>Phone: 04652-246789</p>
+                    <p>24/7 Emergency Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotels" class="location-details">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Hotels and Accommodation</h2>
+            </div>
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <h4>Luxury Hotels</h4>
+                    <ul>
+                        <li>Hotel Singaar International
+                            <ul>
+                                <li>Contact: 04652-246333</li>
+                                <li>Rate: ₹3000-5000/night</li>
+                                <li>Location: Beach Road</li>
+                            </ul>
+                        </li>
+                        <li>Hotel Sea View
+                            <ul>
+                                <li>Contact: 04652-247777</li>
+                                <li>Rate: ₹2500-4500/night</li>
+                                <li>Location: Near Sunset Point</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h4>Budget Hotels</h4>
+                    <ul>
+                        <li>TTDC Hotel Tamil Nadu
+                            <ul>
+                                <li>Contact: 04652-246218</li>
+                                <li>Rate: ₹1000-2000/night</li>
+                                <li>Location: Near Bus Stand</li>
+                            </ul>
+                        </li>
+                        <li>Hotel Sun Park
+                            <ul>
+                                <li>Contact: 04652-246444</li>
+                                <li>Rate: ₹800-1500/night</li>
+                                <li>Location: Town Center</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps" class="maps-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Location & Directions</h2>
+            </div>
+            <div class="maps-flex-container">
+                <div class="maps-left">
+                    <div class="map-card">
+                        <div id="kanyakumari-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31695.645702030497!2d77.52652770603657!3d8.087838910510647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ed9be5c4e0a9%3A0xf5c73a8f7e185f10!2sKanyakumari%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3><i class="fas fa-route"></i> Getting Here</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-plane"></i> Trivandrum Airport: 87 km</span>
+                                <span><i class="fas fa-train"></i> Kanyakumari Station: 1 km</span>
+                                <span><i class="fas fa-bus"></i> Bus Stand: 0.5 km</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> Best Time to Visit</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-sun"></i> October to February</span>
+                                <span><i class="fas fa-umbrella-beach"></i> Beach Activities</span>
+                                <span><i class="fas fa-cloud-sun"></i> Pleasant Weather</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> Travel Tips</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-camera"></i> Best Sunrise Views</span>
+                                <span><i class="fas fa-ferry"></i> Book Ferry Early</span>
+                                <span><i class="fas fa-hat-cowboy"></i> Carry Sun Protection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="maps-right">
+                    <div class="map-locations">
+                        <h3><i class="fas fa-map-marker-alt"></i> Key Locations</h3>
+                        <div class="location-list">
+                            <div class="location-item">
+                                <i class="fas fa-monument"></i>
+                                <span>Vivekananda Rock Memorial</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-landmark"></i>
+                                <span>Thiruvalluvar Statue</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-sun"></i>
+                                <span>Sunset Point</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-church"></i>
+                                <span>Our Lady of Ransom Church</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-gopuram"></i>
+                                <span>Kumari Amman Temple</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-water"></i>
+                                <span>Triveni Sangam</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-umbrella-beach"></i>
+                                <span>Kanyakumari Beach</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-store"></i>
+                                <span>Main Bazaar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="additional-info">
+                        <div class="info-card">
+                            <h3><i class="fas fa-bus"></i> Local Transport</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-taxi"></i> Auto-rickshaws Available</span>
+                                <span><i class="fas fa-bus-alt"></i> Local Bus Service</span>
+                                <span><i class="fas fa-car-side"></i> Taxi Services</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-phone"></i> Emergency Contacts</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-hospital"></i> Emergency: 108</span>
+                                <span><i class="fas fa-shield-alt"></i> Police: 100</span>
+                                <span><i class="fas fa-info"></i> Tourist Help: 1800-425-4969</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Emergency Contacts</h3>
+                <ul>
+                    <li>Police: 100</li>
+                    <li>Ambulance: 108</li>
+                    <li>Tourist Helpline: 1800-425-4969</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#tourist-places">Tourist Places</a></li>
+                    <li><a href="#healthcare">Healthcare</a></li>
+                    <li><a href="#hotels">Hotels</a></li>
+                    <li><a href="#maps">Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Weather API Integration
+        $(document).ready(function() {
+            const API_KEY = 'YOUR_API_KEY'; // Replace with actual OpenWeatherMap API key
+            const CITY = 'Kanyakumari';
+            
+            // Current Weather
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                $('#current-weather').html(`
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather icon">
+                    </div>
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <p class="temperature">${Math.round(data.main.temp)}°C</p>
+                        <p class="description">${data.weather[0].description}</p>
+                        <p class="humidity">Humidity: ${data.main.humidity}%</p>
+                    </div>
+                `);
+            });
+
+            // 3-Day Forecast
+            $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                let forecastHtml = '<div class="forecast-days">';
+                for(let i = 0; i < data.list.length; i += 8) {
+                    const day = new Date(data.list[i].dt * 1000);
+                    forecastHtml += `
+                        <div class="forecast-day">
+                            <h4>${day.toLocaleDateString('en-US', {weekday: 'short'})}</h4>
+                            <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt="Weather icon">
+                            <p>${Math.round(data.list[i].main.temp)}°C</p>
+                            <p>${data.list[i].weather[0].description}</p>
+                        </div>
+                    `;
+                }
+                forecastHtml += '</div>';
+                $('.forecast-container').html(forecastHtml);
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayanad Travel Guide - Sahara Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="wayanad-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#travel-tips">Travel Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="wayanad-hero">
+        <div class="hero-content">
+            <h1>Welcome to Wayanad</h1>
+            <p>Experience the mystical beauty of Kerala's greenest paradise</p>
+            <a href="#attractions" class="explore-btn">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section wayanad-weather">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps" class="tirupati-section wayanad-map">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Location & Directions</h2>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250851.89355759532!2d75.96588215465511!3d11.712558575781017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60cf91a9c5f0d%3A0x71dd4da2e1d3e46f!2sWayanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="wayanad-details" class="location-details">
+        <div class="details-container">
+            <h2>Complete Guide to Wayanad</h2>
+            
+            <div class="detail-section" id="accommodation">
+                <h3><i class="fas fa-hotel"></i> Accommodation Options</h3>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h4>Luxury Resorts</h4>
+                        <ul>
+                            <li>Vythiri Resort - Tree House Experience</li>
+                            <li>Banasura Hill Resort - Eco-friendly Stay</li>
+                            <li>Windflower Resort & Spa - Premium Wellness</li>
+                            <li>Wayanad Wild - KTDC Property</li>
+                        </ul>
+                        <p>Price Range: ₹8000 to ₹25000 per night</p>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Budget & Mid-range Options</h4>
+                        <ul>
+                            <li>Stream Valley Cottages</li>
+                            <li>Green Gates Hotel</li>
+                            <li>Wayanad Coffee Trail Resort</li>
+                            <li>Homestays in Kalpetta and Vythiri</li>
+                        </ul>
+                        <p>Price Range: ₹1500 to ₹5000 per night</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section" id="attractions">
+                <h3><i class="fas fa-mountain"></i> Must-Visit Attractions</h3>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h4>Natural Wonders</h4>
+                        <ul>
+                            <li>Chembra Peak
+                                <ul>
+                                    <li>Trekking Permission Required</li>
+                                    <li>Best Time: 7:00 AM to 2:00 PM</li>
+                                </ul>
+                            </li>
+                            <li>Banasura Sagar Dam</li>
+                            <li>Meenmutty Falls</li>
+                            <li>Soochipara Falls</li>
+                            <li>Kanthanpara Falls</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Wildlife & Heritage</h4>
+                        <ul>
+                            <li>Wayanad Wildlife Sanctuary
+                                <ul>
+                                    <li>Safari Timings: 7:00 AM & 3:00 PM</li>
+                                    <li>Prior Booking Required</li>
+                                </ul>
+                            </li>
+                            <li>Edakkal Caves</li>
+                            <li>Thirunelli Temple</li>
+                            <li>Kuruva Island</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section" id="activities">
+                <h3><i class="fas fa-leaf"></i> Activities & Experiences</h3>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h4>Adventure Activities</h4>
+                        <ul>
+                            <li>Trekking Trails
+                                <ul>
+                                    <li>Chembra Peak Trek</li>
+                                    <li>Pakshipathalam Trek</li>
+                                    <li>Brahmagiri Trek</li>
+                                </ul>
+                            </li>
+                            <li>Bamboo Rafting at Kuruva Island</li>
+                            <li>Night Camping</li>
+                            <li>Zip Lining</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Cultural Experiences</h4>
+                        <ul>
+                            <li>Spice Plantation Tours</li>
+                            <li>Tea Factory Visits</li>
+                            <li>Tribal Village Visits</li>
+                            <li>Traditional Pottery Making</li>
+                            <li>Local Cuisine Workshops</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section" id="travel-tips">
+                <h3><i class="fas fa-info-circle"></i> Travel Tips</h3>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h4>Best Time to Visit</h4>
+                        <ul>
+                            <li>October to May (Peak Season)</li>
+                            <li>Avoid Monsoon (June-September)</li>
+                            <li>Winter (December-February) for best weather</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Essential Information</h4>
+                        <ul>
+                            <li>Nearest Airports:
+                                <ul>
+                                    <li>Calicut International Airport (85 km)</li>
+                                    <li>Kannur International Airport (115 km)</li>
+                                </ul>
+                            </li>
+                            <li>Local Transport: Jeeps, Taxis, Bus Services</li>
+                            <li>Languages: Malayalam, English</li>
+                            <li>Emergency Contact: 112</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section" id="contact">
+                <h3><i class="fas fa-building"></i> Our Office Location</h3>
+                <div class="detail-card contact-info">
+                    <h4>Sahara Travel Services - Wayanad Branch</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Sultan Bathery, Wayanad - 673592</p>
+                    <p><i class="fas fa-phone"></i> Contact: +91-XXX-XXXXXXX</p>
+                    <p><i class="fas fa-clock"></i> Working Hours: 9:00 AM to 6:00 PM (All days)</p>
+                    <p><i class="fas fa-info-circle"></i> Services:</p>
+                    <ul>
+                        <li>Customized Tour Packages</li>
+                        <li>Adventure Activity Bookings</li>
+                        <li>Resort Reservations</li>
+                        <li>Local Transport Arrangement</li>
+                        <li>24/7 Tourist Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Sahara Travel</h3>
+                <p>Your trusted companion for exploring the most beautiful destinations in India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Weather API Integration
+        $(document).ready(function() {
+            const API_KEY = 'YOUR_API_KEY'; // Replace with actual OpenWeatherMap API key
+            const CITY = 'Wayanad';
+            
+            // Current Weather
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                $('#current-weather').html(`
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather icon">
+                    </div>
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <p class="temperature">${Math.round(data.main.temp)}°C</p>
+                        <p class="description">${data.weather[0].description}</p>
+                        <p class="humidity">Humidity: ${data.main.humidity}%</p>
+                    </div>
+                `);
+            });
+
+            // 3-Day Forecast
+            $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                let forecastHtml = '<div class="forecast-days">';
+                for(let i = 0; i < data.list.length; i += 8) {
+                    const day = new Date(data.list[i].dt * 1000);
+                    forecastHtml += `
+                        <div class="forecast-day">
+                            <h4>${day.toLocaleDateString('en-US', {weekday: 'short'})}</h4>
+                            <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt="Weather icon">
+                            <p>${Math.round(data.list[i].main.temp)}°C</p>
+                            <p>${data.list[i].weather[0].description}</p>
+                        </div>
+                    `;
+                }
+                forecastHtml += '</div>';
+                $('.forecast-container').html(forecastHtml);
+            });
+        });
+    </script>
+</body>
+</html> 

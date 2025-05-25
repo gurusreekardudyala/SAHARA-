@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooty Travel Guide - Sahara Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="ooty-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#healthcare">Healthcare</a></li>
+                <li><a href="#police">Police Stations</a></li>
+                <li><a href="#office">Office Areas</a></li>
+                <li><a href="#tourist">Tourist Places</a></li>
+                <li><a href="#temples">Religious Places</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="ooty-hero">
+        <div class="tirupati-hero-content">
+            <h1>Welcome to Ooty (Udhagamandalam)</h1>
+            <p>Experience the Queen of Hill Stations in the Nilgiris</p>
+            <a href="#tourist" class="book-darshan">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section ooty-weather">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps" class="tirupati-section ooty-map">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Location & Directions</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Getting Here</h3>
+                    <ul class="info-list">
+                        <li>Located in Tamil Nadu, South India</li>
+                        <li>80 km from Coimbatore</li>
+                        <li>265 km from Bangalore</li>
+                        <li>285 km from Mysore</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Best Time to Visit</h3>
+                    <ul class="info-list">
+                        <li>March to June (Summer)</li>
+                        <li>Pleasant temperature: 10-20°C</li>
+                        <li>Tea Tourism Season (April-May)</li>
+                        <li>Less crowded on weekdays</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> Travel Tips</h3>
+                    <ul class="info-list">
+                        <li>Carry warm clothing</li>
+                        <li>Visit Botanical Garden early morning</li>
+                        <li>Book hotels in advance during peak season</li>
+                        <li>Local transport readily available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62706.89381945855!2d76.67883731138974!3d11.410795860529833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd84b5f3d78d%3A0x179bdb14c93e3f42!2sOoty%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-route"></i> Major Attractions</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-tree"></i> Botanical Gardens: 2 km from center</span>
+                        <span><i class="fas fa-water"></i> Ooty Lake: 3 km</span>
+                        <span><i class="fas fa-mountain"></i> Doddabetta Peak: 10 km</span>
+                        <span><i class="fas fa-train"></i> Nilgiri Mountain Railway: 1 km</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-bus"></i> Local Transport</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-bus"></i> City Bus Service</span>
+                        <span><i class="fas fa-car"></i> Taxi Services</span>
+                        <span><i class="fas fa-auto-rickshaw"></i> Auto Rickshaws</span>
+                        <span><i class="fas fa-bicycle"></i> Bike Rentals</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Helpline Numbers</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-info-circle"></i> Tourist Help: 1800-425-4082</span>
+                        <span><i class="fas fa-taxi"></i> Taxi Booking: 0423-2442000</span>
+                        <span><i class="fas fa-hospital"></i> Medical Emergency: 108</span>
+                        <span><i class="fas fa-shield-alt"></i> Police Control: 100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="healthcare" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Healthcare Facilities</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-hospital"></i> Government Headquarters Hospital</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Sagar Road, Ooty</span>
+                        <span><i class="fas fa-clock"></i> 24/7 Emergency Services</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2443400</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-ambulance"></i> Vijaya Hospital</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Garden Road, Near Botanical Garden</span>
+                        <span><i class="fas fa-stethoscope"></i> Multi-specialty Private Hospital</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2442049</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-user-md"></i> CSI Mission Hospital</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Coonoor Road, Ooty</span>
+                        <span><i class="fas fa-clock"></i> 24/7 Care Available</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2443555</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="police" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Police Stations</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-shield-alt"></i> Ooty Town Police Station</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Near Municipal Market, Commercial Road</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2443220</span>
+                        <span><i class="fas fa-clock"></i> 24/7 Service</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-shield-alt"></i> Ooty North Police Station</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Near Bus Stand, Ettines Road</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2443327</span>
+                        <span><i class="fas fa-clock"></i> 24/7 Service</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-shield-alt"></i> Tourist Police Station</h3>
+                    <div class="temple-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Charring Cross Junction</span>
+                        <span><i class="fas fa-phone"></i> Phone: 0423-2444013</span>
+                        <span><i class="fas fa-users"></i> Tourist Assistance Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="office" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Business Districts & Office Areas</h2>
+            </div>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?market-street" alt="Commercial Road">
+                    <div class="card-content">
+                        <h3>Commercial Road</h3>
+                        <p>Main shopping and business hub of Ooty with government offices</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-building"></i> Government Offices</span>
+                            <span><i class="fas fa-shopping-cart"></i> Shopping Complex</span>
+                            <span><i class="fas fa-bank"></i> Banks Available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?market" alt="Charring Cross">
+                    <div class="card-content">
+                        <h3>Charring Cross</h3>
+                        <p>Central business area with banks and commercial establishments</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-store"></i> Commercial Hub</span>
+                            <span><i class="fas fa-bank"></i> Financial District</span>
+                            <span><i class="fas fa-coffee"></i> Restaurants & Cafes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tourist" class="tirupati-section ooty-tourist">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Tourist Attractions</h2>
+            </div>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?botanical-garden" alt="Botanical Gardens">
+                    <div class="card-content">
+                        <h3>Government Botanical Gardens</h3>
+                        <p>Located in Vannarpet, 150-year-old gardens spanning 55 acres</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 8:30 AM - 6:30 PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Entry: ₹30</span>
+                            <span><i class="fas fa-camera"></i> Photography Allowed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?lake" alt="Ooty Lake">
+                    <div class="card-content">
+                        <h3>Ooty Lake</h3>
+                        <p>North Lake Road, 2.5 km artificial lake with boating facilities</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-ship"></i> Boating Available</span>
+                            <span><i class="fas fa-parking"></i> Parking Available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?tea-plantation" alt="Tea Gardens">
+                    <div class="card-content">
+                        <h3>Tea Gardens</h3>
+                        <p>Doddabetta Road, featuring the famous Nilgiri tea plantations</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-leaf"></i> Tea Factory Tours</span>
+                            <span><i class="fas fa-shopping-bag"></i> Tea Shopping</span>
+                            <span><i class="fas fa-mountain"></i> Scenic Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temples" class="tirupati-section ooty-tourist">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Religious Places</h2>
+            </div>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?temple" alt="Elk Hill Murugan Temple">
+                    <div class="card-content">
+                        <h3>Elk Hill Murugan Temple</h3>
+                        <p>Elk Hill, offering panoramic views of Ooty valley</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 6:00 AM - 8:00 PM</span>
+                            <span><i class="fas fa-mountain"></i> Hill Top Location</span>
+                            <span><i class="fas fa-om"></i> Daily Puja Available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?church" alt="St. Stephen's Church">
+                    <div class="card-content">
+                        <h3>St. Stephen's Church</h3>
+                        <p>Church Hill Road, historic church from 1829</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                            <span><i class="fas fa-cross"></i> Sunday Mass: 8:00 AM</span>
+                            <span><i class="fas fa-landmark"></i> Heritage Site</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?hindu-temple" alt="Sri Ayyappa Temple">
+                    <div class="card-content">
+                        <h3>Sri Ayyappa Temple</h3>
+                        <p>Fingerpost, Ooty-Mysore Road</p>
+                        <div class="temple-info">
+                            <span><i class="fas fa-clock"></i> 5:30 AM - 8:30 PM</span>
+                            <span><i class="fas fa-om"></i> Special Puja Available</span>
+                            <span><i class="fas fa-parking"></i> Free Parking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Sahara Travel</h3>
+                <p>Your trusted companion for exploring the most beautiful destinations in India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#tourist">Tourist Places</a></li>
+                    <li><a href="#temples">Religious Places</a></li>
+                    <li><a href="#healthcare">Healthcare</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Weather API Integration
+        $(document).ready(function() {
+            const API_KEY = 'YOUR_API_KEY'; // Replace with actual OpenWeatherMap API key
+            const CITY = 'Ooty';
+            
+            // Current Weather
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                $('#current-weather').html(`
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather icon">
+                    </div>
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <p class="temperature">${Math.round(data.main.temp)}°C</p>
+                        <p class="description">${data.weather[0].description}</p>
+                        <p class="humidity">Humidity: ${data.main.humidity}%</p>
+                    </div>
+                `);
+            });
+
+            // 3-Day Forecast
+            $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                let forecastHtml = '<div class="forecast-days">';
+                for(let i = 0; i < data.list.length; i += 8) {
+                    const day = new Date(data.list[i].dt * 1000);
+                    forecastHtml += `
+                        <div class="forecast-day">
+                            <h4>${day.toLocaleDateString('en-US', {weekday: 'short'})}</h4>
+                            <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt="Weather icon">
+                            <p>${Math.round(data.list[i].main.temp)}°C</p>
+                            <p>${data.list[i].weather[0].description}</p>
+                        </div>
+                    `;
+                }
+                forecastHtml += '</div>';
+                $('.forecast-container').html(forecastHtml);
+            });
+        });
+    </script>
+</body>
+</html> 

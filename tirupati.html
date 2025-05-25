@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirumala Tirupati - Sacred Temple Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sahara Travel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="index.html#guides">Travel Guides</a></li>
+                <li><a href="index.html#tips">Travel Tips</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tirupati-hero">
+        <div class="tirupati-hero-content">
+            <h1>Sri Venkateswara Temple, Tirumala</h1>
+            <p>Experience the divine presence at one of India's most sacred temples</p>
+            <a href="#darshan-booking" class="book-darshan">Book Darshan</a>
+        </div>
+    </section>
+
+    <div class="quick-links">
+        <ul>
+            <li><a href="#overview"><i class="fas fa-info-circle"></i> Overview</a></li>
+            <li><a href="#weather"><i class="fas fa-cloud-sun"></i> Weather</a></li>
+            <li><a href="#darshan-booking"><i class="fas fa-ticket-alt"></i> Darshan Booking</a></li>
+            <li><a href="#accommodation"><i class="fas fa-bed"></i> Accommodation</a></li>
+            <li><a href="#transportation"><i class="fas fa-bus"></i> Transportation</a></li>
+            <li><a href="#facilities"><i class="fas fa-concierge-bell"></i> Facilities</a></li>
+            <li><a href="#contact-info"><i class="fas fa-phone"></i> Contact Info</a></li>
+        </ul>
+    </div>
+
+    <section id="overview" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Temple Overview</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-history"></i> History</h3>
+                    <p>The temple of Lord Venkateswara is located on the seventh peak of Tirumala Hills. According to ancient scriptures, the temple has been in existence for thousands of years and is considered one of the most sacred places in Hinduism.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-landmark"></i> Architecture</h3>
+                    <p>The temple is built in Dravidian architecture with the main tower (Vimana) covered in pure gold. The temple complex spans several acres and includes various mandapams and sub-shrines.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-pray"></i> Significance</h3>
+                    <p>Lord Venkateswara is believed to be the incarnation of Vishnu who appeared here to save mankind from the troubles of Kali Yuga. The temple is one of the richest and most visited religious places in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="weather" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Weather Information</h2>
+            </div>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <div id="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="weather-info">
+                            <h3>Current Weather</h3>
+                            <p class="temperature">Loading...</p>
+                            <p class="description">Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <div id="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-container">
+                            Loading forecast...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="darshan-booking" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Darshan Information</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Darshan Timings</h3>
+                    <div class="darshan-times">
+                        <h4>Daily Schedule</h4>
+                        <div class="time-slot">
+                            <span>Suprabhata Seva</span>
+                            <span>3:00 AM - 4:30 AM</span>
+                        </div>
+                        <div class="time-slot">
+                            <span>Sarva Darshan</span>
+                            <span>5:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="time-slot">
+                            <span>Special Entry Darshan</span>
+                            <span>Throughout the day</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-ticket-alt"></i> Types of Darshan</h3>
+                    <ul class="info-list">
+                        <li>Sarva Darshan (Free Darshan)</li>
+                        <li>Special Entry Darshan (₹300)</li>
+                        <li>VIP Break Darshan (₹500)</li>
+                        <li>Special Break Darshan</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+                    <ul class="info-list">
+                        <li>Carry valid ID proof</li>
+                        <li>Mobile phones not allowed</li>
+                        <li>Dress code strictly followed</li>
+                        <li>Photography prohibited</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="accommodation" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Accommodation</h2>
+            </div>
+            <div class="temple-grid">
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?hotel-room" alt="Guest House">
+                    <div class="temple-content">
+                        <h3>TTD Guest Houses</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-rupee-sign"></i> ₹100 - ₹5000 per night</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Located near temple</span>
+                            <span><i class="fas fa-phone"></i> Booking: 0877-2277777</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?dormitory" alt="Rest House">
+                    <div class="temple-content">
+                        <h3>Pilgrim Amenities Complex</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-rupee-sign"></i> ₹50 - ₹200 per night</span>
+                            <span><i class="fas fa-users"></i> Dormitory style</span>
+                            <span><i class="fas fa-clock"></i> 24-hour check-in</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temple-card">
+                    <img src="https://source.unsplash.com/800x600/?luxury-hotel" alt="Private Hotels">
+                    <div class="temple-content">
+                        <h3>Private Hotels</h3>
+                        <div class="temple-info">
+                            <span><i class="fas fa-star"></i> 2-5 Star options</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹1000 onwards</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tirupati city</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transportation" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Transportation</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-plane"></i> By Air</h3>
+                    <ul class="info-list">
+                        <li>Tirupati Airport (12 km from city)</li>
+                        <li>Regular flights from major cities</li>
+                        <li>Airport shuttle available</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-train"></i> By Train</h3>
+                    <ul class="info-list">
+                        <li>Tirupati Railway Station</li>
+                        <li>Well connected to major cities</li>
+                        <li>Regular trains available</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-bus"></i> Local Transport</h3>
+                    <ul class="info-list">
+                        <li>TTD Free Buses</li>
+                        <li>Private Taxi Services</li>
+                        <li>Auto Rickshaws</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Facilities & Services</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-utensils"></i> Food Services</h3>
+                    <ul class="info-list">
+                        <li>Free Annaprasadam</li>
+                        <li>Paid Restaurants</li>
+                        <li>Food Courts</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-hospital"></i> Medical Facilities</h3>
+                    <ul class="info-list">
+                        <li>24/7 Medical Centers</li>
+                        <li>Emergency Services</li>
+                        <li>Pharmacy Shops</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-shopping-bag"></i> Other Amenities</h3>
+                    <ul class="info-list">
+                        <li>Luggage Storage</li>
+                        <li>Wheelchair Facility</li>
+                        <li>Hair Tonsuring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-info" class="tirupati-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Location & Nearby Places</h2>
+            </div>
+            <div class="maps-flex-container">
+                <div class="maps-left">
+                    <div class="map-card">
+                        <div id="tirupati-map"></div>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3><i class="fas fa-phone"></i> Important Numbers</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-headset"></i> General Enquiry: 0877-2277777</span>
+                                <span><i class="fas fa-bed"></i> Accommodation: 0877-2233333</span>
+                                <span><i class="fas fa-ambulance"></i> Emergency: 0877-2222333</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-route"></i> Getting Here</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-plane"></i> Tirupati Airport: 12 km</span>
+                                <span><i class="fas fa-train"></i> Railway Station: 3 km</span>
+                                <span><i class="fas fa-bus"></i> Bus Stand: 2 km</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> Contact Info</h3>
+                            <div class="temple-info">
+                                <span><i class="fas fa-envelope"></i> helpdesk@tirumala.org</span>
+                                <span><i class="fas fa-globe"></i> www.tirumala.org</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Tirumala, Tirupati</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="maps-right">
+                    <div class="map-locations">
+                        <h3><i class="fas fa-map-marker-alt"></i> Nearby Attractions</h3>
+                        <div class="location-list" id="nearby-places">
+                            <!-- Nearby places will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="additional-info">
+                        <div class="info-card">
+                            <h3><i class="fas fa-filter"></i> Filter Places</h3>
+                            <div class="place-filters">
+                                <button class="filter-btn" data-type="temple">Temples</button>
+                                <button class="filter-btn" data-type="restaurant">Restaurants</button>
+                                <button class="filter-btn" data-type="hotel">Hotels</button>
+                                <button class="filter-btn" data-type="shopping">Shopping</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Sahara Travel</h3>
+                <p>Your trusted companion for exploring sacred destinations across India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                    <li><a href="index.html#guides">Travel Guides</a></li>
+                    <li><a href="index.html#tips">Travel Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahara Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+    <script>
+        // Weather API Integration
+        $(document).ready(function() {
+            const API_KEY = 'YOUR_API_KEY'; // Replace with actual OpenWeatherMap API key
+            const CITY = 'Tirupati';
+            
+            // Current Weather
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                $('#current-weather').html(`
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather icon">
+                    </div>
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <p class="temperature">${Math.round(data.main.temp)}°C</p>
+                        <p class="description">${data.weather[0].description}</p>
+                    </div>
+                `);
+            });
+
+            // 3-Day Forecast
+            $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`, function(data) {
+                let forecastHtml = '<div class="forecast-days">';
+                for(let i = 0; i < data.list.length; i += 8) {
+                    const day = new Date(data.list[i].dt * 1000);
+                    forecastHtml += `
+                        <div class="forecast-day">
+                            <h4>${day.toLocaleDateString('en-US', {weekday: 'short'})}</h4>
+                            <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt="Weather icon">
+                            <p>${Math.round(data.list[i].main.temp)}°C</p>
+                            <p>${data.list[i].weather[0].description}</p>
+                        </div>
+                    `;
+                }
+                forecastHtml += '</div>';
+                $('.forecast-container').html(forecastHtml);
+            });
+        });
+
+        // Live Darshan Queue Status (Simulated)
+        function updateQueueStatus() {
+            const queueTimes = {
+                'Sarva Darshan': Math.floor(Math.random() * 5) + 2 + ' hours',
+                'Special Entry': Math.floor(Math.random() * 2) + 1 + ' hours',
+                'VIP Darshan': Math.floor(Math.random() * 30) + 15 + ' minutes'
+            };
+
+            Object.keys(queueTimes).forEach(type => {
+                $(`.queue-time[data-type="${type}"]`).text(queueTimes[type]);
+            });
+        }
+
+        // Update queue status every 5 minutes
+        updateQueueStatus();
+        setInterval(updateQueueStatus, 300000);
+
+        // Google Maps Integration
+        let map;
+        let service;
+        let infowindow;
+        const tirupatiTemple = { lat: 13.6833, lng: 79.3474 }; // Tirupati Temple coordinates
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("tirupati-map"), {
+                center: tirupatiTemple,
+                zoom: 14,
+                styles: [
+                    {
+                        featureType: "poi.business",
+                        stylers: [{ visibility: "off" }],
+                    },
+                    {
+                        featureType: "transit",
+                        elementType: "labels.icon",
+                        stylers: [{ visibility: "off" }],
+                    },
+                ],
+            });
+
+            infowindow = new google.maps.InfoWindow();
+            service = new google.maps.places.PlacesService(map);
+
+            // Add marker for Tirupati Temple
+            const templeMarker = new google.maps.Marker({
+                position: tirupatiTemple,
+                map: map,
+                title: "Sri Venkateswara Temple",
+                icon: {
+                    url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                    scaledSize: new google.maps.Size(40, 40),
+                },
+            });
+
+            // Show temple info when marker is clicked
+            templeMarker.addListener("click", () => {
+                infowindow.setContent(`
+                    <div class="info-window">
+                        <h3>Sri Venkateswara Temple</h3>
+                        <p>The main temple complex in Tirumala</p>
+                        <p>Open 24/7</p>
+                    </div>
+                `);
+                infowindow.open(map, templeMarker);
+            });
+
+            // Initial search for nearby places
+            searchNearbyPlaces("temple");
+        }
+
+        function searchNearbyPlaces(type) {
+            const request = {
+                location: tirupatiTemple,
+                radius: 5000, // 5km radius
+                type: type
+            };
+
+            service.nearbySearch(request, (results, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    clearMarkers();
+                    createPlacesList(results);
+                    addMarkersToMap(results);
+                }
+            });
+        }
+
+        let markers = [];
+
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+        }
+
+        function addMarkersToMap(places) {
+            places.forEach(place => {
+                const marker = new google.maps.Marker({
+                    position: place.geometry.location,
+                    map: map,
+                    title: place.name,
+                    animation: google.maps.Animation.DROP
+                });
+
+                markers.push(marker);
+
+                marker.addListener("click", () => {
+                    const content = `
+                        <div class="info-window">
+                            <h3>${place.name}</h3>
+                            <p>${place.vicinity}</p>
+                            <p>Rating: ${place.rating ? place.rating + '/5' : 'N/A'}</p>
+                        </div>
+                    `;
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker);
+                });
+            });
+        }
+
+        function createPlacesList(places) {
+            const placesList = document.getElementById("nearby-places");
+            placesList.innerHTML = "";
+
+            places.forEach(place => {
+                const placeItem = document.createElement("div");
+                placeItem.className = "location-item";
+                placeItem.innerHTML = `
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="place-details">
+                        <span class="place-name">${place.name}</span>
+                        <span class="place-address">${place.vicinity}</span>
+                        <span class="place-rating">Rating: ${place.rating ? place.rating + '/5' : 'N/A'}</span>
+                    </div>
+                `;
+
+                placeItem.addEventListener("click", () => {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(16);
+                    google.maps.event.trigger(markers[places.indexOf(place)], "click");
+                });
+
+                placesList.appendChild(placeItem);
+            });
+        }
+
+        // Add event listeners to filter buttons
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const type = button.dataset.type;
+                    filterButtons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    searchNearbyPlaces(type);
+                });
+            });
+        });
+
+        // Initialize map when the API is loaded
+        window.initMap = initMap;
+    </script>
+</body>
+</html> 
